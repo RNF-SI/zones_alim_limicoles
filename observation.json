@@ -1,0 +1,148 @@
+{
+  "display_properties": [
+    "choix",
+    "groupe",
+    "distance",
+    "azimut",
+    "cd_nom",
+    "effectif_alim",
+    "effectif_repos",
+    "effectif_total",
+    "activite",
+    "nombre",
+    "comments"
+  ],
+  "display_list": [
+    "choix",
+    "cd_nom",
+    "activite"
+  ],
+  "specific": {
+    "choix": {
+      "type_widget": "select",
+      "required": true,
+      "attribut_label": "Type d'observation",
+      "values": ["Limicole", "Activité humaine"]
+    },
+    "groupe": {
+      "type_widget": "number",
+      "attribut_label": "Groupe",
+      "hidden": "({value}) => (value.choix != 'Limicole' && value.choix != 'Activité humaine')",
+      "required": true
+    },
+    "cd_nom": {
+      "hidden": "({value}) => (value.choix != 'Limicole')",
+      "required": "({value}) => (value.choix == 'Limicole')"
+    },
+    "activite": {
+      "type_widget": "select",
+      "required": "({value}) => (value.choix == 'Activité humaine')",
+      "hidden": "({value}) => (value.choix != 'Activité humaine')",
+      "attribut_label": "Activité",
+      "values": ["Aéronef",
+        "Baigneur",
+        "Bateau",
+        "Cavalier",
+        "Cerf-Volant",
+        "Char À Voile",
+        "Chasseur",
+        "Chien Seul",
+        "Conchiliculteur",
+        "Cueillette Algues",
+        "Goemonier",
+        "Jet-Ski",
+        "Jeu De Plage",
+        "Jogger",
+        "Kayak",
+        "Kite Surf",
+        "Longe Côte",
+        "Naturaliste",
+        "Paddle",
+        "Pêche À La Ligne",
+        "Pêche À Pied Professionnelle",
+        "Pêche À Pied Recréative",
+        "Pêche D'Appats",
+        "Photographe",
+        "Planche À Voile",
+        "Promeneur",
+        "Promeneur Chien En Laisse",
+        "Promeneur Chien Sans Laisse",
+        "Skimboard",
+        "Speed Sail",
+        "Suivi-Gestion",
+        "Sulky",
+        "Surfer",
+        "Tellineur",
+        "Tir Entendu",
+        "Véhicule Au Sol",
+        "Vtt"]
+    },
+    "distance": {
+      "type_widget": "number",
+      "attribut_label": "Distance",
+      "hidden": "({value}) => (value.choix != 'Limicole' && value.choix != 'Activité humaine')",
+      "required": true,
+      "min": 0
+    },
+    "azimut": {
+      "type_widget": "number",
+      "attribut_label": "Azimut",
+      "min": 0,
+      "max": 360,
+      "hidden": "({value}) => (value.choix != 'Limicole' && value.choix != 'Activité humaine')",
+      "required": true
+    },
+    "effectif_alim": {
+      "type_widget": "number",
+      "attribut_label": "Effectif en alimentation",
+      "hidden": "({value}) => (value.choix != 'Limicole')",
+      "required": "({value}) => (value.choix == 'Limicole')"
+    },
+    "effectif_repos": {
+      "type_widget": "number",
+      "attribut_label": "Effectif au repos",
+      "hidden": "({value}) => (value.choix != 'Limicole')",
+      "required": "({value}) => (value.choix == 'Limicole')"
+    },
+    "effectif_total": {
+      "type_widget": "number",
+      "attribut_label": "Effectif total",
+      "hidden": true
+    },
+    "nombre": {
+      "type_widget": "number",
+      "attribut_label": "Nombre",
+      "required": "({value}) => (value.choix == 'Activité humaine')",
+      "hidden": "({value}) => (value.choix != 'Activité humaine')"
+    },
+    "comments": {
+      "attribute_label": "Commentaire"
+    }
+  },
+  "change": [
+      "({objForm, meta}) => {",
+      "const effectif_total = objForm.value.effectif_repos + objForm.value.effectif_alim;",
+      "if (objForm.value.choix == 'Limicole' && !objForm.controls.effectif_total.dirty) {",
+      "console.log('coucou');",
+      "objForm.patchValue({effectif_total})",
+      "}",
+      "const cd_nom = 0;",
+      "if (objForm.value.choix == 'Activité humaine') {",
+      "objForm.patchValue({cd_nom})",
+      "}",
+      "let zero = {",
+      "cd_nom: cd_nom,",
+      "activite: null,",
+      "effectif_alim: null,",
+      "effectif_repos: null,",
+      "effectif_total: null,",
+      "nombre: null",
+      "};",
+      "if((!!objForm.old_choix) && (objForm.value.choix != objForm.old_choix)) {",
+      "objForm.patchValue(zero)",
+      "}",
+      "objForm.old_choix = objForm.value.choix;",
+      "}",
+      ""
+      ]
+}

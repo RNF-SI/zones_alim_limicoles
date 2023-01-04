@@ -1,0 +1,120 @@
+{
+  "display_properties": [
+    "visit_date_min",
+    "heure_debut",
+    "heure_fin",
+    "xobs",
+    "yobs",
+    "duree",
+    "dist_eau",
+    "azimut_eau",
+    "nebulosite",
+    "vent_force",
+    "azimut_vent",
+    "heure_pm",
+    "heure_bm",
+    "coeff",
+    "obsv",
+    "comments",
+    "nb_observations"
+  ],
+  "display_list": [
+    "visit_date_min",
+    "duree",
+    "obsv",
+    "nb_observations"
+  ],
+  "specific": {
+    "observers": {
+      "hidden": true,
+      "required": false
+    },
+    "obsv": {
+      "type_widget": "text",
+      "attribut_label": "Observateurs",
+      "required": true
+    },
+    "heure_debut": {
+      "type_widget": "time",
+      "attribut_label": "Heure de début",
+      "required": true
+    },
+    "heure_fin": {
+      "type_widget": "time",
+      "attribut_label": "Heure de fin",
+      "required": true
+    },
+    "duree": {
+      "type_widget": "number",
+      "attribut_label": "Durée",
+      "hidden": true
+    },
+    "dist_eau": {
+      "type_widget": "number",
+      "attribut_label": "Distance de l'eau"
+    },
+    "azimut_eau": {
+      "type_widget": "number",
+      "attribut_label": "Azimut de l'eau",
+      "min": 0,
+      "max": 360
+    },
+    "nebulosite": {
+      "type_widget": "select",
+      "attribut_label": "Nébulosité",
+      "values": ["Couvert", "Nuageux", "Ciel bleu"]
+    },
+    "vent_force": {
+      "type_widget": "select",
+      "attribut_label": "Force du vent",
+      "values": ["Faible", "Moyen", "Fort"]
+    },
+    "azimut_vent": {
+      "type_widget": "number",
+      "attribut_label": "Azimut du vent",
+      "min": 0,
+      "max": 360
+    },
+    "heure_pm": {
+      "type_widget": "time",
+      "attribut_label": "Heure de pleine mer",
+      "required": true
+    },
+    "heure_bm": {
+      "type_widget": "time",
+      "attribut_label": "Heure de basse mer",
+      "required": true
+    },
+    "coeff": {
+      "type_widget": "number",
+      "attribut_label": "Coefficient de marée",
+      "min":20,
+      "max":120,
+      "required": true
+    },
+    "xobs": {
+      "type_widget": "number",
+      "attribut_label": "Coordonnée X de l'observateur (WGS84)",
+      "required": true
+    },
+    "yobs": {
+      "type_widget": "number",
+      "attribut_label": "Coordonnée Y de l'observateur (WGS84)",
+      "required": true
+    },
+    "id_dataset": {
+      "required":false,
+      "hidden":false
+    }
+  },
+  "change": [
+      "({objForm, meta}) => {",
+      "const duree = objForm.value.heure_fin - objForm.value.heure_debut;",
+      "if (!objForm.controls.duree.dirty) {",
+      "console.log(duree);",
+      "objForm.patchValue({duree})",
+      "}",
+      "}",
+      ""
+      ]
+}

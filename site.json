@@ -1,0 +1,75 @@
+{
+  "cruved": {
+    "C": 3,
+    "U": 3,
+    "D": 3
+  },
+  "label": "Zone d'études",
+  "label_list": "Zones d'études",
+  "sorts": [
+    {
+      "prop": "base_site_name",
+      "dir": "asc"
+    }
+  ],
+  "filters": {},
+  "geometry_type": "Point",
+  "display_properties": [
+    "id_sites_group",
+    "base_site_code",
+    "base_site_name",
+    "base_site_description",
+    "gestionnaire",
+    "operateur",
+    "superficie",
+    "habitat_sedimentaire",
+    "last_visit",
+    "nb_visits"
+  ],
+  "display_list": [
+    "id_sites_group",
+    "base_site_name",
+    "last_visit",
+    "nb_visits"
+  ],
+  "specific":{
+    "gestionnaire": {
+      "type_widget": "text",
+      "attribut_label": "Gestionnaire de la zone d'étude"
+    },
+    "operateur": {
+      "type_widget": "text",
+      "attribut_label": "Opérateur des suivis"
+    },
+    "superficie": {
+      "type_widget": "number",
+      "attribut_label": "Superficie de la zone d'étude",
+      "required": true
+    },
+    "habitat_sedimentaire": {
+      "type_widget": "select",
+      "attribut_label": "Habitat sédimentaire",
+      "values": ["Sableux", "Vaseux", "Sablo-Vaseux", "Rocheux"]
+    },
+    "id_sites_group": {
+      "attribut_label": "Site",
+      "required": false,
+      "hidden": false
+    },
+    "id_nomenclature_type_site": {
+      "required":false,
+      "hidden":true,
+      "default" : {
+        "cd_nomenclature": "LIMACT"
+      }
+    },
+    "id_inventor": {
+      "required":false,
+      "hidden":true
+    },
+    "first_use_date": {
+      "required":false,
+      "hidden":true
+    }
+  }
+}

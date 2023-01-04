@@ -1,0 +1,9 @@
+{
+    "module_label":"Zones d’alimentation intertidales et activités humaines de l’estran",
+    "module_desc":"Module de suivi des zones d’alimentation intertidales et activités humaines de l’estran porté par Réserves Naturelles de France",
+    "permission_objects" : [
+        "GNM_GRP_SITES",
+        "GNM_SITES",
+        "GNM_VISITES"
+    ]
+}
