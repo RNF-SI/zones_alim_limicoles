@@ -1,9 +1,44 @@
 {
   "chained": false,
   "cruved": {"C": 3, "U": 3, "D": 3},
-  "label": "Site",
-  "label_list": "Sites",
+  "label": "Site fonctionnel",
+  "label_list": "Sites fonctionnels",
   "sorts": [
     {"prop": "sites_group_name"}
-  ]
+  ],
+  "specific": {
+    "modules": {
+      "hidden": true
+    },
+    "sites_group_name": {
+      "type_widget": "text",
+      "attribut_label": "Nom du site fonctionnel",
+      "required": true,
+      "definition": "Nom du site fonctionnel pour l'OPNL."
+    },
+    "sites_group_code": {
+      "type_widget": "text",
+      "attribut_label": "Code du site fonctionnel",
+      "required": true
+    },
+    "uuid_sites_group": {
+      "type_widget": "text",
+      "attribut_label": "UUID du site fonctionnel",
+      "required": false,
+      "hidden": false
+    },
+    "sites_group_description": {
+      "type_widget": "textarea",
+      "attribut_label": "Description",
+      "hidden": true
+    },
+    "comments": {
+      "type_widget": "textarea",
+      "attribut_label": "Commentaire",
+      "hidden": true
+    },
+    "nb_sites": {
+      "attribut_label": "Nb. de zones d'étude"
+    }
+  }
 }

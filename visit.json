@@ -46,8 +46,7 @@
     },
     "duree": {
       "type_widget": "number",
-      "attribut_label": "Durée",
-      "hidden": true
+      "attribut_label": "Durée"
     },
     "dist_eau": {
       "type_widget": "number",
@@ -60,14 +59,16 @@
       "max": 360
     },
     "nebulosite": {
-      "type_widget": "select",
+      "type_widget": "nomenclature",
       "attribut_label": "Nébulosité",
-      "values": ["Couvert", "Nuageux", "Ciel bleu"]
+      "code_nomenclature_type": "NEBULOSITE",
+      "type_util": "nomenclature"
     },
     "vent_force": {
-      "type_widget": "select",
+      "type_widget": "nomenclature",
       "attribut_label": "Force du vent",
-      "values": ["Faible", "Moyen", "Fort"]
+      "code_nomenclature_type": "VENT_FORCE",
+      "type_util": "nomenclature"
     },
     "azimut_vent": {
       "type_widget": "number",
@@ -108,13 +109,25 @@
     }
   },
   "change": [
-      "({objForm, meta}) => {",
-      "const duree = objForm.value.heure_fin - objForm.value.heure_debut;",
-      "if (!objForm.controls.duree.dirty) {",
-      "console.log(duree);",
-      "objForm.patchValue({duree})",
-      "}",
-      "}",
-      ""
-      ]
+    "({objForm, meta}) => {",
+    "const heure_debut = objForm.value.heure_debut;",
+    "const heure_fin = objForm.value.heure_fin;",
+    "let duree = null;",
+    "if (heure_debut != null && heure_fin != null) {",
+    "const toMinutes = (time) => {",
+    "if (typeof time === 'object' && time.hour != null) {",
+    "return time.hour * 60 + (time.minute || 0);",
+    "}",
+    "const parts = String(time).split(':');",
+    "return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);",
+    "};",
+    "duree = toMinutes(heure_fin) - toMinutes(heure_debut);",
+    "if (duree < 0) duree += 24 * 60;",
+    "}",
+    "if (!objForm.controls.duree.dirty) {",
+    "objForm.patchValue({duree})",
+    "}",
+    "}",
+    ""
+  ]
 }

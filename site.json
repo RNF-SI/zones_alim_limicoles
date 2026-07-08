@@ -1,9 +1,4 @@
 {
-  "cruved": {
-    "C": 3,
-    "U": 3,
-    "D": 3
-  },
   "label": "Zone d'études",
   "label_list": "Zones d'études",
   "sorts": [
@@ -47,21 +42,14 @@
       "required": true
     },
     "habitat_sedimentaire": {
-      "type_widget": "select",
+      "type_widget": "nomenclature",
       "attribut_label": "Habitat sédimentaire",
-      "values": ["Sableux", "Vaseux", "Sablo-Vaseux", "Rocheux"]
+      "code_nomenclature_type": "HABITAT_SEDIMENTAIRE",
+      "type_util": "nomenclature"
     },
-    "id_sites_group": {
-      "attribut_label": "Site",
-      "required": false,
-      "hidden": false
-    },
-    "id_nomenclature_type_site": {
-      "required":false,
-      "hidden":true,
-      "default" : {
-        "cd_nomenclature": "LIMACT"
-      }
+    "types_site": {
+      "default": "__MODULE.IDS_TYPE_SITE", 
+      "hidden": true
     },
     "id_inventor": {
       "required":false,

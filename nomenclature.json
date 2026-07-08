@@ -1,0 +1,386 @@
+{
+  "types": [
+    {
+      "mnemonique": "TYPE_SITE",
+      "label_default": "Type de sites",
+      "definition_default": "Nomenclature des types de sites suivi dans gn_monitoring."
+    },
+    {
+      "mnemonique": "TYPE_OBSERVATION",
+      "label_default": "Type d'observation",
+      "definition_default": "Type d'observation limicole ou activité humaine."
+    },
+    {
+      "mnemonique": "ACTIVITE_HUMAINE",
+      "label_default": "Activité humaine",
+      "definition_default": "Type d'activité humaine observée sur l'estran."
+    },
+    {
+      "mnemonique": "HABITAT_SEDIMENTAIRE",
+      "label_default": "Habitat sédimentaire",
+      "definition_default": "Type d'habitat sédimentaire de la zone d'étude."
+    },
+    {
+      "mnemonique": "NEBULOSITE",
+      "label_default": "Nébulosité",
+      "definition_default": "Nébulosité lors de la visite."
+    },
+    {
+      "mnemonique": "VENT_FORCE",
+      "label_default": "Force du vent",
+      "definition_default": "Force du vent lors de la visite."
+    }
+  ],
+  "nomenclatures": [
+    {
+      "type": "TYPE_SITE",
+      "cd_nomenclature": "limact",
+      "mnemonique": "limact",
+      "label_default": "Zone d'étude d'alimentation limicoles",
+      "definition_default": "Zone d'étude du protocole des zones d'alimentation des limicoles et activités humaines de l'estran"
+    },
+    {
+      "type": "TYPE_OBSERVATION",
+      "cd_nomenclature": "Limicole",
+      "mnemonique": "Limicole",
+      "label_default": "Limicole",
+      "definition_default": "Observation de limicoles"
+    },
+    {
+      "type": "TYPE_OBSERVATION",
+      "cd_nomenclature": "ActiviteHumaine",
+      "mnemonique": "ActiviteHumaine",
+      "label_default": "Activité humaine",
+      "definition_default": "Observation d'activité humaine"
+    },
+    {
+      "type": "HABITAT_SEDIMENTAIRE",
+      "cd_nomenclature": "Sableux",
+      "mnemonique": "Sableux",
+      "label_default": "Sableux",
+      "definition_default": "Habitat sédimentaire sableux"
+    },
+    {
+      "type": "HABITAT_SEDIMENTAIRE",
+      "cd_nomenclature": "Vaseux",
+      "mnemonique": "Vaseux",
+      "label_default": "Vaseux",
+      "definition_default": "Habitat sédimentaire vaseux"
+    },
+    {
+      "type": "HABITAT_SEDIMENTAIRE",
+      "cd_nomenclature": "SabloVaseux",
+      "mnemonique": "SabloVaseux",
+      "label_default": "Sablo-Vaseux",
+      "definition_default": "Habitat sédimentaire sablo-vaseux"
+    },
+    {
+      "type": "HABITAT_SEDIMENTAIRE",
+      "cd_nomenclature": "Rocheux",
+      "mnemonique": "Rocheux",
+      "label_default": "Rocheux",
+      "definition_default": "Habitat sédimentaire rocheux"
+    },
+    {
+      "type": "NEBULOSITE",
+      "cd_nomenclature": "Couvert",
+      "mnemonique": "Couvert",
+      "label_default": "Couvert",
+      "definition_default": "Ciel couvert"
+    },
+    {
+      "type": "NEBULOSITE",
+      "cd_nomenclature": "Nuageux",
+      "mnemonique": "Nuageux",
+      "label_default": "Nuageux",
+      "definition_default": "Ciel nuageux"
+    },
+    {
+      "type": "NEBULOSITE",
+      "cd_nomenclature": "CielBleu",
+      "mnemonique": "CielBleu",
+      "label_default": "Ciel bleu",
+      "definition_default": "Ciel bleu"
+    },
+    {
+      "type": "VENT_FORCE",
+      "cd_nomenclature": "Faible",
+      "mnemonique": "Faible",
+      "label_default": "Faible",
+      "definition_default": "Vent faible"
+    },
+    {
+      "type": "VENT_FORCE",
+      "cd_nomenclature": "Moyen",
+      "mnemonique": "Moyen",
+      "label_default": "Moyen",
+      "definition_default": "Vent moyen"
+    },
+    {
+      "type": "VENT_FORCE",
+      "cd_nomenclature": "Fort",
+      "mnemonique": "Fort",
+      "label_default": "Fort",
+      "definition_default": "Vent fort"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Aeronef",
+      "mnemonique": "Aeronef",
+      "label_default": "Aéronef",
+      "definition_default": "Aéronef"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Baigneur",
+      "mnemonique": "Baigneur",
+      "label_default": "Baigneur",
+      "definition_default": "Baigneur"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Bateau",
+      "mnemonique": "Bateau",
+      "label_default": "Bateau",
+      "definition_default": "Bateau"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Cavalier",
+      "mnemonique": "Cavalier",
+      "label_default": "Cavalier",
+      "definition_default": "Cavalier"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "CerfVolant",
+      "mnemonique": "CerfVolant",
+      "label_default": "Cerf-Volant",
+      "definition_default": "Cerf-Volant"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "CharAVoile",
+      "mnemonique": "CharAVoile",
+      "label_default": "Char À Voile",
+      "definition_default": "Char À Voile"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Chasseur",
+      "mnemonique": "Chasseur",
+      "label_default": "Chasseur",
+      "definition_default": "Chasseur"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "ChienSeul",
+      "mnemonique": "ChienSeul",
+      "label_default": "Chien Seul",
+      "definition_default": "Chien Seul"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Conchiliculteur",
+      "mnemonique": "Conchiliculteur",
+      "label_default": "Conchiliculteur",
+      "definition_default": "Conchiliculteur"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "CueilletteAlgues",
+      "mnemonique": "CueilletteAlgues",
+      "label_default": "Cueillette Algues",
+      "definition_default": "Cueillette Algues"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Goemonier",
+      "mnemonique": "Goemonier",
+      "label_default": "Goemonier",
+      "definition_default": "Goemonier"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "JetSki",
+      "mnemonique": "JetSki",
+      "label_default": "Jet-Ski",
+      "definition_default": "Jet-Ski"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "JeuDePlage",
+      "mnemonique": "JeuDePlage",
+      "label_default": "Jeu De Plage",
+      "definition_default": "Jeu De Plage"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Jogger",
+      "mnemonique": "Jogger",
+      "label_default": "Jogger",
+      "definition_default": "Jogger"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Kayak",
+      "mnemonique": "Kayak",
+      "label_default": "Kayak",
+      "definition_default": "Kayak"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "KiteSurf",
+      "mnemonique": "KiteSurf",
+      "label_default": "Kite Surf",
+      "definition_default": "Kite Surf"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "LongeCote",
+      "mnemonique": "LongeCote",
+      "label_default": "Longe Côte",
+      "definition_default": "Longe Côte"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Naturaliste",
+      "mnemonique": "Naturaliste",
+      "label_default": "Naturaliste",
+      "definition_default": "Naturaliste"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Paddle",
+      "mnemonique": "Paddle",
+      "label_default": "Paddle",
+      "definition_default": "Paddle"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PecheALaLigne",
+      "mnemonique": "PecheALaLigne",
+      "label_default": "Pêche À La Ligne",
+      "definition_default": "Pêche À La Ligne"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PecheAPiedProfessionnelle",
+      "mnemonique": "PecheAPiedProfessionnelle",
+      "label_default": "Pêche À Pied Professionnelle",
+      "definition_default": "Pêche À Pied Professionnelle"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PecheAPiedRecreative",
+      "mnemonique": "PecheAPiedRecreative",
+      "label_default": "Pêche À Pied Recréative",
+      "definition_default": "Pêche À Pied Recréative"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PecheDAppats",
+      "mnemonique": "PecheDAppats",
+      "label_default": "Pêche D'Appats",
+      "definition_default": "Pêche D'Appats"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Photographe",
+      "mnemonique": "Photographe",
+      "label_default": "Photographe",
+      "definition_default": "Photographe"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PlancheAVoile",
+      "mnemonique": "PlancheAVoile",
+      "label_default": "Planche À Voile",
+      "definition_default": "Planche À Voile"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Promeneur",
+      "mnemonique": "Promeneur",
+      "label_default": "Promeneur",
+      "definition_default": "Promeneur"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PromeneurChienEnLaisse",
+      "mnemonique": "PromeneurChienEnLaisse",
+      "label_default": "Promeneur Chien En Laisse",
+      "definition_default": "Promeneur Chien En Laisse"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PromeneurChienSansLaisse",
+      "mnemonique": "PromeneurChienSansLaisse",
+      "label_default": "Promeneur Chien Sans Laisse",
+      "definition_default": "Promeneur Chien Sans Laisse"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Skimboard",
+      "mnemonique": "Skimboard",
+      "label_default": "Skimboard",
+      "definition_default": "Skimboard"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "SpeedSail",
+      "mnemonique": "SpeedSail",
+      "label_default": "Speed Sail",
+      "definition_default": "Speed Sail"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "SuiviGestion",
+      "mnemonique": "SuiviGestion",
+      "label_default": "Suivi-Gestion",
+      "definition_default": "Suivi-Gestion"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Sulky",
+      "mnemonique": "Sulky",
+      "label_default": "Sulky",
+      "definition_default": "Sulky"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Surfer",
+      "mnemonique": "Surfer",
+      "label_default": "Surfer",
+      "definition_default": "Surfer"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Tellineur",
+      "mnemonique": "Tellineur",
+      "label_default": "Tellineur",
+      "definition_default": "Tellineur"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "TirEntendu",
+      "mnemonique": "TirEntendu",
+      "label_default": "Tir Entendu",
+      "definition_default": "Tir Entendu"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "VehiculeAuSol",
+      "mnemonique": "VehiculeAuSol",
+      "label_default": "Véhicule Au Sol",
+      "definition_default": "Véhicule Au Sol"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Vtt",
+      "mnemonique": "Vtt",
+      "label_default": "Vtt",
+      "definition_default": "Vtt"
+    }
+  ]
+}
