@@ -41,6 +41,13 @@
     },
     {
       "type": "TYPE_OBSERVATION",
+      "cd_nomenclature": "aucune",
+      "mnemonique": "aucune",
+      "label_default": "Aucune observation",
+      "definition_default": "Aucune observation"
+    },
+    {
+      "type": "TYPE_OBSERVATION",
       "cd_nomenclature": "Limicole",
       "mnemonique": "Limicole",
       "label_default": "Limicole",
@@ -52,6 +59,13 @@
       "mnemonique": "ActiviteHumaine",
       "label_default": "Activité humaine",
       "definition_default": "Observation d'activité humaine"
+    },
+    {
+      "type": "HABITAT_SEDIMENTAIRE",
+      "cd_nomenclature": "nodata",
+      "mnemonique": "nodata",
+      "label_default": "Pas de données",
+      "definition_default": "Pas de données"
     },
     {
       "type": "HABITAT_SEDIMENTAIRE",
@@ -83,6 +97,13 @@
     },
     {
       "type": "NEBULOSITE",
+      "cd_nomenclature": "nodata",
+      "mnemonique": "nodata",
+      "label_default": "Pas de données",
+      "definition_default": "Pas de données"
+    },
+    {
+      "type": "NEBULOSITE",
       "cd_nomenclature": "Couvert",
       "mnemonique": "Couvert",
       "label_default": "Couvert",
@@ -104,6 +125,13 @@
     },
     {
       "type": "VENT_FORCE",
+      "cd_nomenclature": "nodata",
+      "mnemonique": "nodata",
+      "label_default": "Pas de données",
+      "definition_default": "Pas de données"
+    },
+    {
+      "type": "VENT_FORCE",
       "cd_nomenclature": "Faible",
       "mnemonique": "Faible",
       "label_default": "Faible",
@@ -122,6 +150,13 @@
       "mnemonique": "Fort",
       "label_default": "Fort",
       "definition_default": "Vent fort"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "aucune",
+      "mnemonique": "aucune",
+      "label_default": "Aucune activité humaine",
+      "definition_default": "Aucune activité humaine"
     },
     {
       "type": "ACTIVITE_HUMAINE",
@@ -381,6 +416,48 @@
       "mnemonique": "Vtt",
       "label_default": "Vtt",
       "definition_default": "Vtt"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Yoga",
+      "mnemonique": "Yoga",
+      "label_default": "Yoga",
+      "definition_default": "Yoga"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "Travaux",
+      "mnemonique": "Travaux",
+      "label_default": "Travaux",
+      "definition_default": "Travaux"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "PiqueNique",
+      "mnemonique": "PiqueNique",
+      "label_default": "Pique-nique",
+      "definition_default": "Pique-nique"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "RamasseurDechets",
+      "mnemonique": "RamasseurDechets",
+      "label_default": "Ramasseur de déchets",
+      "definition_default": "Ramasseur de déchets"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "TournageFilm",
+      "mnemonique": "TournageFilm",
+      "label_default": "Tournage film",
+      "definition_default": "Tournage film"
+    },
+    {
+      "type": "ACTIVITE_HUMAINE",
+      "cd_nomenclature": "ChercheurTresor",
+      "mnemonique": "ChercheurTresor",
+      "label_default": "Chercheur de trésor",
+      "definition_default": "Chercheur de trésor"
     }
   ]
 }
